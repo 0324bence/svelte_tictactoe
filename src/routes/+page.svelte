@@ -23,16 +23,9 @@
         }
 
         a {
+            @include button;
             display: block;
-            text-decoration: none;
-            text-align: center;
             width: 20rem;
-            font-size: 3rem;
-            padding: 0.2rem;
-            color: $background_color;
-            font-weight: bolder;
-            border-radius: 1rem;
-            background-color: $foreground_color;
         }
     }
 </style>

@@ -1,2 +1,13 @@
 $foreground_color: hsl(0, 0%, 92%);
 $background_color: hsl(0, 0%, 20%);
+
+@mixin button {
+    text-decoration: none;
+    text-align: center;
+    font-size: 3rem;
+    padding: 0.2rem;
+    color: $background_color;
+    font-weight: bolder;
+    border-radius: 1rem;
+    background-color: $foreground_color;
+}
