@@ -1,7 +1,7 @@
 <div id="container">
     <h1>TicTac<br />Toe</h1>
     <div id="buttons">
-        <a href="/">Play</a>
+        <a href="/local/setup">Play</a>
     </div>
 </div>
 
