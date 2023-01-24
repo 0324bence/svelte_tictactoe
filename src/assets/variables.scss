@@ -10,4 +10,9 @@ $background_color: hsl(0, 0%, 20%);
     font-weight: bolder;
     border-radius: 1rem;
     background-color: $foreground_color;
+    cursor: pointer;
+
+    &:hover {
+        background: darken($foreground_color, 20%);
+    }
 }
