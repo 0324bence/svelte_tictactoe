@@ -19,11 +19,10 @@
             return ret;
         })();
 
+    //keep goal between values
     $: {
         const max = Math.max(width, height);
         if (max < goal) goal = max;
-        const min = Math.min(width, height);
-        if (min > goal) goal = min;
     }
     //keep properties in range
     $: {
@@ -57,19 +56,47 @@
         })();
     }
 
-    //keep goal between values
+    function onSubmit() {
+        if (width < 3) width = 3;
+        if (height < 3) height = 3;
+        if (goal < 3) goal = 3;
+    }
 </script>
 
-<div id="container">
+<form id="container" action="/local/game" method="post">
     <h1>Create</h1>
     <div id="dimensions">
-        <input type="number" bind:value={width} max="12" class="dimensions-input" />
+        <input
+            id="width"
+            name="width"
+            type="number"
+            bind:value={width}
+            max="12"
+            class="dimensions-input"
+            on:blur={() => (width < 3 ? (width = 3) : 0)}
+        />
         <span>X</span>
-        <input type="number" bind:value={height} max="12" class="dimensions-input" />
+        <input
+            id="height"
+            name="height"
+            type="number"
+            bind:value={height}
+            max="12"
+            class="dimensions-input"
+            on:blur={() => (height < 3 ? (height = 3) : 0)}
+        />
     </div>
-    <div id="goal">
+    <div id="goal-container">
         <h3>Goal</h3>
-        <input type="number" bind:value={goal} max={Math.max(width, height)} class="dimensions-input" />
+        <input
+            id="goal"
+            name="goal"
+            type="number"
+            bind:value={goal}
+            max={Math.max(width, height)}
+            class="dimensions-input"
+            on:blur={() => (goal < 2 ? (goal = 2) : 0)}
+        />
     </div>
     <div id="preview-container">
         <h2>Preview</h2>
@@ -80,9 +107,9 @@
         </div>
     </div>
     <div id="create-container">
-        <a href="" id="create">Create</a>
+        <button type="submit" id="create">Create</button>
     </div>
-</div>
+</form>
 
 <style lang="scss">
     @import "@/assets/variables.scss";
@@ -107,8 +134,9 @@
 
             #create {
                 @include button;
-                display: block;
                 width: 20rem;
+                border: none;
+                outline: none;
             }
         }
 
@@ -139,7 +167,7 @@
             }
         }
 
-        #goal {
+        #goal-container {
             display: flex;
             flex-direction: column;
             align-items: center;
