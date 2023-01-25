@@ -116,7 +116,7 @@
 
     #container {
         width: 100%;
-        height: 100vh;
+        min-height: 100vh;
         padding: 2rem;
         display: flex;
         flex-direction: column;
@@ -131,6 +131,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            margin: 1rem;
 
             #create {
                 @include button;
