@@ -41,6 +41,7 @@
     function Reset() {
         board = new Board(width, height, goal);
         currplayer = 1;
+        won = 0;
     }
 </script>
 
