@@ -2,6 +2,7 @@
     <h1>TicTac<br />Toe</h1>
     <div id="buttons">
         <a href="/local/setup">Play</a>
+        <a href="/online">Online</a>
     </div>
 </div>
 
@@ -20,6 +21,13 @@
             text-align: center;
             font-size: 10rem;
             color: $foreground_color;
+        }
+
+        #buttons {
+            gap: 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         a {

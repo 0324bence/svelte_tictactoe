@@ -16,6 +16,7 @@
             // Another listener for the name:
             username = name; // Update the name so it can be displayed
         });
+        io.emit("name");
     });
 
     function sendMessage() {
