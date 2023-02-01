@@ -18,7 +18,7 @@
 
         h1 {
             text-align: center;
-            font-size: 12rem;
+            font-size: 10rem;
             color: $foreground_color;
         }
 
@@ -26,6 +26,11 @@
             @include button;
             display: block;
             width: 20rem;
+        }
+    }
+    @media screen and (max-width: 768px) {
+        #container h1 {
+            font-size: 7rem;
         }
     }
 </style>
