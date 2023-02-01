@@ -1,6 +1,5 @@
 import { sveltekit } from "@sveltejs/kit/vite";
 import type { UserConfig } from "vite";
-import { Server } from "socket.io";
 
 const config: UserConfig = {
     plugins: [

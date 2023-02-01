@@ -13,6 +13,11 @@ const config = {
         adapter: adapter(),
         alias: {
             "@": "./src"
+        },
+        files: {
+            hooks: {
+                server: "src/hooks/hooks.server"
+            }
         }
     }
 };
