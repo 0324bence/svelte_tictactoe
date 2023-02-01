@@ -37,8 +37,7 @@ const config: UserConfig = {
     },
     preview: {
         port: 3000
-    },
-    publicDir: "./public"
+    }
 };
 
 export default config;
