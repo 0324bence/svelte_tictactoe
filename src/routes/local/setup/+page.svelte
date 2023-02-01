@@ -208,15 +208,15 @@
         }
 
         h1 {
-            font-size: 9rem;
+            font-size: 7rem;
         }
 
         h2 {
-            font-size: 5rem;
+            font-size: 4rem;
         }
 
         h3 {
-            font-size: 3rem;
+            font-size: 2.5rem;
         }
     }
 </style>
