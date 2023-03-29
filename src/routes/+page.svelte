@@ -2,7 +2,7 @@
     <h1>TicTac<br />Toe</h1>
     <div id="buttons">
         <a href="/local/setup">Play</a>
-        <a href="/online">Online</a>
+        <!-- <a href="/online">Online</a> -->
     </div>
 </div>
 
